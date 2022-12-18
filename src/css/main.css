@@ -1,7 +1,8 @@
 .nav,
 .bottom-nav {
   display: flex;
-  margin: 0 40px;
+  /* margin: 0 30px; */
+  width: 357px;
   padding: 5px 0;
   flex-direction: row;
   justify-content: space-between;
@@ -25,8 +26,8 @@ nav {
   font-size: 12px;
 }
 .main-center img {
-  height: 40px;
-  width: 40px;
+  height: 30px;
+  width: 30px;
 }
 /**********
 ************ Icon
@@ -49,8 +50,8 @@ nav {
 }
 .msg img,
 .profile img {
-  width: 40px;
-  height: 40px;
+  width: 30px;
+  height: 30px;
   margin: 0px;
   cursor: pointer;
 }
@@ -58,8 +59,9 @@ nav {
 .main-screen {
   display: flex;
   justify-content: center;
-  height: 76vh;
+  height: 73vh;
   align-items: center;
+  max-width: 373px;
 }
 .movie {
   z-index: 1;
@@ -68,14 +70,15 @@ nav {
   z-index: inherit;
 }
 .link-logo {
-  height: 40px;
-  width: 40px;
+  height: 30px;
+  width: 30px;
 }
 .links a {
   display: flex;
   align-items: center;
-  justify-content: flex-end;
-  width: 100px;
+  justify-content: center;
+  width: 50px;
+  padding-top: 10px;
 }
 .links a:hover {
   transform: scale(1.1);
@@ -85,5 +88,5 @@ nav {
   flex-direction: row;
   align-items: center;
   justify-content: center;
-  width: 220px;
+  width: 160px;
 }

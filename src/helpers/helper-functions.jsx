@@ -4,7 +4,7 @@
 
 // send a post request that has a file as well
 export const postReqForm = async (data, location) => {
-  return await fetch(`http://localhost:3000/${location}`, {
+  return await fetch(`https://crud-movie-chris.herokuapp.com/${location}`, {
     method: 'POST',
     mode: 'cors',
     credentials: 'include',
@@ -14,7 +14,7 @@ export const postReqForm = async (data, location) => {
 
 // send standard json post request
 export const postReq = async (data, location) => {
-  return await fetch(`http://localhost:3000/${location}`, {
+  return await fetch(`https://crud-movie-chris.herokuapp.com/${location}`, {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',
@@ -27,11 +27,14 @@ export const postReq = async (data, location) => {
 
 //send a standard get reqest
 export const getReq = async (location) => {
-  const res = await fetch(`http://localhost:3000/${location}`, {
-    method: 'GET',
-    mode: 'cors',
-    credentials: 'include',
-  })
+  const res = await fetch(
+    `https://crud-movie-chris.herokuapp.com/${location}`,
+    {
+      method: 'GET',
+      mode: 'cors',
+      credentials: 'include',
+    }
+  )
   return await res.json()
 }
 
@@ -94,16 +97,19 @@ export async function authReg(cred, setForm, setMsg) {
     setMsg((obj) => ({ ...obj, user: false, pass: true }))
     return
   }
-  const res = await fetch('http://localhost:3000/users/username_check', {
-    method: 'POST',
-    headers: {
-      Accept: 'application/json',
-      'Content-Type': 'application/json',
-    },
-    mode: 'cors',
-    credentials: 'include',
-    body: JSON.stringify({ user: user }),
-  })
+  const res = await fetch(
+    'https://crud-movie-chris.herokuapp.com/users/username_check',
+    {
+      method: 'POST',
+      headers: {
+        Accept: 'application/json',
+        'Content-Type': 'application/json',
+      },
+      mode: 'cors',
+      credentials: 'include',
+      body: JSON.stringify({ user: user }),
+    }
+  )
   let data = await res.json()
   if (data.message == true) {
     setMsg((obj) => ({ ...obj, user: false, pass: false }))

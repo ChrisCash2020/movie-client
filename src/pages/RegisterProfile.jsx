@@ -63,7 +63,7 @@ export default function Profile(props) {
     return result
   }
   const register = (
-    <div className='center col cover'>
+    <div className='center col cover1'>
       <div className='center col fade'>
         <div className='center col'>
           <h1>Register</h1>
@@ -104,7 +104,7 @@ export default function Profile(props) {
     </div>
   )
   const welcome = (
-    <div className='center cover col right_ani'>
+    <div className='center cover1 col right_ani' style={{ border: 'none' }}>
       <div className='center col left_ani'>
         <img src={logo} alt='' />
         <br />
@@ -140,7 +140,7 @@ export default function Profile(props) {
         status: true,
         user: data,
       })
-      navigate(`/`)
+      navigate(`/movie-client`)
     } else {
       console.log(error)
     }
@@ -219,7 +219,7 @@ export default function Profile(props) {
             }}
             className='sign_up_continue fade'
           >
-            complete
+            Continue
           </button>
         )}
         {form.onPref && (
@@ -229,7 +229,7 @@ export default function Profile(props) {
             }}
             className='sign_up_continue fade'
           >
-            complete
+            Complete
           </button>
         )}
       </div>

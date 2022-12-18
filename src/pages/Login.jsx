@@ -27,7 +27,6 @@ export function Login(props) {
       'users/login'
     )
     let data = await res.json()
-    console.log(data)
     if (data.id) {
       props.setAuthState({
         status: true,
@@ -44,7 +43,7 @@ export function Login(props) {
       {props.authState.status ? (
         <_404 message={'Already Logged In'} />
       ) : (
-        <div className='center col cover'>
+        <div className='center col cover1'>
           <div className='center col fade'>
             <div className='center col'>
               <h1>Login</h1>

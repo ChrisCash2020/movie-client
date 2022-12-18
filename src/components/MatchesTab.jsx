@@ -19,7 +19,7 @@ export default function MatchesTab(props) {
       <br />
       <div
         className='center col match-movie-container'
-        style={{ width: '90%' }}
+        style={{ width: '100%' }}
       >
         <div
           className='center col'
@@ -34,8 +34,8 @@ export default function MatchesTab(props) {
             className='movie-img'
             style={{
               backgroundImage: `url(${movie.url})`,
-              height: '250px',
-              width: '300px',
+              height: '200px',
+              width: '250px',
             }}
           ></div>
         </div>
@@ -61,11 +61,9 @@ export default function MatchesTab(props) {
           <p>{movie.overview}</p>
         </div>
       </div>
-      <div className='matches-container' style={{ maxWidth: '90%' }}>
+      <div className='matches-container' style={{ width: '100%' }}>
         {matches}
-        {matches.length < 1 && (
-          <h3 style={{ color: '#999', fontSize: '1.3rem' }}>No matches</h3>
-        )}
+        {matches.length < 1 && <h3 style={{ color: '#999' }}>No matches</h3>}
       </div>
     </div>
   )

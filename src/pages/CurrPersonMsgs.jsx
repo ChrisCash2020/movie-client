@@ -3,12 +3,11 @@ import { useLocation } from 'react-router-dom'
 import io from 'socket.io-client'
 import * as F from '../helpers/helper-functions'
 import { nanoid } from 'nanoid'
-const socket = io.connect('http://localhost:3000')
+const socket = io.connect('https://crud-movie-chris.herokuapp.com')
 
 export default function CurrentPersonMsg(props) {
   const location = useLocation()
   const { roomId } = location.state
-  console.log(roomId)
   const [currentMessage, setCurrentMessage] = useState('')
   const [messageList, setMessageList] = useState([])
   async function getMessages() {
@@ -48,12 +47,12 @@ export default function CurrentPersonMsg(props) {
   useEffect(() => {
     if (props.sender.id) {
       getMessages()
-      const arr = window.location.pathname.split('/message/')
-      socket.emit('join_room', arr[1])
+      socket.emit('join_room', roomId)
     }
   }, [])
   useEffect(() => {
     if (props.sender.id) {
+      console.log('in the receive')
       socket.on('receive_message', (data) => {
         setMessageList((list) => [...list, data])
       })
@@ -79,7 +78,7 @@ export default function CurrentPersonMsg(props) {
                   style={{
                     margin: '10px 10px 2px 10px',
                     textTransform: 'none',
-                    fontSize: '0.8rem',
+                    fontSize: '0.7rem',
                   }}
                 >
                   {messageContent.author === props.sender.name
@@ -91,7 +90,7 @@ export default function CurrentPersonMsg(props) {
                   style={{
                     margin: '2px 10px',
                     textTransform: 'none',
-                    fontSize: '0.85rem',
+                    fontSize: '0.75rem',
                   }}
                 >
                   {messageContent.time}
@@ -112,7 +111,12 @@ export default function CurrentPersonMsg(props) {
               event.key === 'Enter' && sendMessage()
             }}
             placeholder='Type a message'
-            style={{ flex: 1, textTransform: 'none' }}
+            style={{
+              flex: 1,
+              textTransform: 'none',
+              height: '25px',
+              fontSize: '0.95rem',
+            }}
           />
           <div
             onClick={sendMessage}

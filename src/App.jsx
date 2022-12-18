@@ -116,7 +116,10 @@ function App() {
   return (
     <>
       <div className='grey-box'></div>
-      <div className='main-container right_ani'>
+      <div
+        className='main-container right_ani'
+        style={{ paddingTop: `${authState.user.id ? '5px' : '30px'}` }}
+      >
         {authState.status && <TopNav />}
         <div className='main-screen'>
           {movieDeck.length < 1 && authState.status && (
@@ -136,48 +139,12 @@ function App() {
             </div>
           )}
           {!hide && <>{authState.status ? <>{movieDeck}</> : <></>}</>}
-          {!hide && (
-            <>
-              {authState.status ? (
-                <div className='genre-select'>
-                  <div
-                    onClick={() => getDeck(authState.user.id, 35)}
-                    className='genre'
-                  >
-                    Comedy
-                  </div>
-                  <div
-                    onClick={() => getDeck(authState.user.id, 10749)}
-                    className='genre'
-                  >
-                    Romance
-                  </div>
-                  <div
-                    onClick={() => getDeck(authState.user.id, 27)}
-                    className='genre'
-                  >
-                    Horror
-                  </div>
-                  <div
-                    onClick={handleGenre}
-                    style={{
-                      backgroundColor: '#48b5fb',
-                      color: '#fff',
-                      textShadow: 'none',
-                    }}
-                    className='genre default-genre'
-                  >
-                    Genre
-                  </div>
-                </div>
-              ) : (
-                <></>
-              )}
-            </>
-          )}
 
           <Routes>
-            <Route path='/' element={<Home authState={authState} />} />
+            <Route
+              path='/'
+              element={<Home authState={authState} />}
+            />
             <Route
               path='/register-form'
               element={
@@ -249,6 +216,45 @@ function App() {
             <div id='icon-center' className='msg'>
               <img onClick={() => onSwipe('left')} src={no} alt='' />
             </div>
+            {!hide && (
+              <>
+                {authState.status ? (
+                  <div className='genre-select'>
+                    <div
+                      onClick={() => getDeck(authState.user.id, 35)}
+                      className='genre'
+                    >
+                      Comedy
+                    </div>
+                    <div
+                      onClick={() => getDeck(authState.user.id, 10749)}
+                      className='genre'
+                    >
+                      Romance
+                    </div>
+                    <div
+                      onClick={() => getDeck(authState.user.id, 27)}
+                      className='genre'
+                    >
+                      Horror
+                    </div>
+                    <div
+                      onClick={handleGenre}
+                      style={{
+                        backgroundColor: '#48b5fb',
+                        color: '#fff',
+                        textShadow: 'none',
+                      }}
+                      className='genre default-genre'
+                    >
+                      Genre
+                    </div>
+                  </div>
+                ) : (
+                  <></>
+                )}
+              </>
+            )}
             <div id='icon-center' className='profile'>
               <img onClick={() => onSwipe('right')} src={fav} alt='' />
             </div>

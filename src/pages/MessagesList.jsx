@@ -25,7 +25,7 @@ export default function MessagesList(props) {
     <>
       <div
         className='edit-container'
-        style={{ overflow: 'scroll', maxHeight: '100%', margin: '0px 40px' }}
+        style={{ overflow: 'scroll', maxHeight: '100%', width: '373px' }}
       >
         <div style={{ flex: 1 }}>
           {people.map((person) => (

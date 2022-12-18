@@ -6,7 +6,7 @@ export default function ProfileBox(props) {
   const match = props.match
   const [close, setClose] = useState(false)
   const [url, setUrl] = useState(
-    `http://localhost:3000/public/uploads/` + match.img
+    `https://crud-movie-chris.herokuapp.com/public/uploads/` + match.img
   )
   function openBox() {
     if (close) {

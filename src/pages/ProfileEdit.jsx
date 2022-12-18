@@ -16,10 +16,15 @@ export default function ProfileEdit(props) {
   })
 
   // State variables for the name_img element
-  const [url, setUrl] = useState(`http://localhost:3000/public/uploads/`)
+  const [url, setUrl] = useState(
+    `https://crud-movie-chris.herokuapp.com/public/uploads/`
+  )
   useEffect(() => {
     if (cred.img != undefined) {
-      setUrl(() => `http://localhost:3000/public/uploads/${cred.img}`)
+      setUrl(
+        () =>
+          `https://crud-movie-chris.herokuapp.com/public/uploads/${cred.img}`
+      )
       for (const key in tempCred) {
         setTempCred((obj) => ({ ...obj, [key]: cred[key] }))
       }

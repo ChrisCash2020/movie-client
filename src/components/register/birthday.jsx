@@ -10,7 +10,7 @@ export default function Birthday(props) {
       <br />
       <input
         className='small-form-input'
-        style={{ textTransform: 'uppercase', width: '70%' }}
+        style={{ textTransform: 'uppercase', width: '70%', height: '80px' }}
         type='date'
         name='bday'
         max={F.max}

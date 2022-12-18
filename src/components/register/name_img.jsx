@@ -1,6 +1,6 @@
 export default function NameImg(props) {
   return (
-    <div className='center cover right_ani' style={{ minHeight: '55vh' }}>
+    <div className='center cover1 right_ani'>
       <div className='center col'>
         {props.info}
         <label style={{ marginTop: '15px' }} className='custom-file-upload'>

@@ -6,11 +6,14 @@ export default function PersonMsgTab(props) {
   const [close, setClose] = useState(false)
   const [info, setInfo] = useState({})
   const [recentMsg, setRecentMsg] = useState(undefined)
-  const [url, setUrl] = useState(`http://localhost:3000/public/uploads/`)
+  const [url, setUrl] = useState(
+    `https://crud-movie-chris.herokuapp.com/public/uploads/`
+  )
   useEffect(() => {
     if (props.person != undefined) {
       setUrl(
-        () => `http://localhost:3000/public/uploads/${props.person.info.img}`
+        () =>
+          `https://crud-movie-chris.herokuapp.com/public/uploads/${props.person.info.img}`
       )
       setInfo(props.person.info)
       if (props.person.chats.length) {
@@ -49,12 +52,6 @@ export default function PersonMsgTab(props) {
                 id: info.id,
               }}
               url={url}
-              styles={{
-                maxHeight: '30vh',
-                minWidth: '8vw',
-                padding: '0px 2vw',
-                margin: '6vh 0px',
-              }}
               chat={false}
             />
           </div>
@@ -65,17 +62,22 @@ export default function PersonMsgTab(props) {
       {props.person.info ? (
         <div
           className='row'
-          style={{ margin: '20px 0', minHeight: '40px', alignItems: 'center' }}
+          style={{
+            margin: '25px 10px',
+            maxHeight: '50px',
+            alignItems: 'center',
+          }}
         >
           <img
             src={url}
             alt=''
             style={{
-              height: '60px',
-              width: '60px',
+              height: '45px',
+              width: '45px',
               borderRadius: '50%',
               border: '1px solid #48b5fb',
-              marginRight: '20px',
+              marginRight: '10px',
+              marginLeft: '10px',
               cursor: 'pointer',
             }}
             onClick={() => setClose((old) => !old)}
@@ -90,7 +92,7 @@ export default function PersonMsgTab(props) {
               paddingBottom: '5px',
             }}
           >
-            <h2 style={{ fontSize: '1.3rem' }}>
+            <h2 style={{ fontSize: '1rem' }}>
               <b>{info.name}</b>
             </h2>
             <br />

@@ -2,19 +2,19 @@
   display: flex;
   flex-direction: column;
   min-height: 100%;
-  min-width: calc(100% - 80px);
+  width: 331px;
 }
 
 .prof-img-container {
-  min-height: calc(24vh);
-  min-width: calc(24vh);
+  min-height: calc(15vh);
+  min-width: calc(15vh);
   overflow: hidden;
   border-radius: 50%;
   align-self: center;
   cursor: pointer;
   background-repeat: no-repeat;
   background-position: center center;
-  background-size: calc(24vh) calc(24vh);
+  background-size: calc(15vh) calc(15vh);
   position: relative;
 }
 .img-container-change {
@@ -36,12 +36,12 @@
 .edit-input {
   position: relative;
   cursor: pointer;
-  left: 59%;
-  top: 45px;
+  left: 55%;
+  top: 25px;
   z-index: 5000;
   border-left: none;
   border-radius: 50%;
-  height: 45px;
+  width: 30px;
 }
 
 .edit-input:hover,
@@ -57,7 +57,7 @@
 .details {
   display: flex;
   flex-direction: column;
-  padding: 20px 13%;
+  /* padding: 20px 13%; */
 }
 .radio-container {
   display: flex;
@@ -71,7 +71,6 @@
 
 .edit-btn {
   align-self: center;
-  max-width: 153px;
   margin-top: 10px;
   cursor: pointer;
   border-radius: 0px;

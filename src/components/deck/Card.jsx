@@ -18,7 +18,7 @@ export default function Card(props) {
                 backgroundImage: `url(${movie.url})`,
                 height: '43vh',
                 minWidth: '130%',
-                backgroundSize: '100%',
+                backgroundSize: '80%',
               }}
             ></div>
           </div>
@@ -26,7 +26,7 @@ export default function Card(props) {
             style={{
               backgroundColor: '#b18a1f',
               padding: '10px',
-              height: '17vh',
+              height: '15vh',
               width: '100%',
               border: '1px solid #eaeaea',
               overflow: 'scroll',
