@@ -41,7 +41,7 @@ This is the front-end repository
 
 > Preview
 <p>
-<img src="https://github.com/ChrisCash2020/Images/blob/master/movie/demo.gif" width="220" height="400" />
+<img src="https://github.com/ChrisCash2020/Images/blob/master/movie/demo.gif" />
 </p>
 
 <br/>
