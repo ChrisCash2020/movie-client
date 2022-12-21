@@ -69,7 +69,7 @@ This is the front-end repository
 
 
 ### Server-Side:
-The back-end repository: <a href="https://github.com/ChrisCash2020/movie-connect-server1/" target="_blank" >movieConnect</a>
+The back-end repository: <a href="https://github.com/ChrisCash2020/movie-connect-server/" target="_blank" >movieConnect</a>
 
 Socket.io Server: 
 - Express server:
