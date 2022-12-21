@@ -1,4 +1,4 @@
-# Tinder Clone (movieConnect) - ReactJS, NodeJS, Mysql, WebSockets
+# Tinder Clone (movieConnect) - ReactJs, NodeJs, MySQL, WebSockets
 
 
 ## Description:
