@@ -4,8 +4,7 @@
 ## Description:
 
 This project was made as a way to practice my WebSockets development.
-I also used it to practice my back-end RestAPI development. It replicats the
-famous swipe animation that Tinder uses, and it exemplifies
+It replicats the famous swipe animation that Tinder uses, and it exemplifies
 several small features present in the real website. I made a
 WebSocket API for my backend using Socket.io Server, which allowed a
 two-way communication between client apps and your backend. 
