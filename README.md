@@ -19,9 +19,9 @@ the database.
 ## Installation
 
 <pre>
-cd into the folder
-npm install to install the modules
-npm start to run the demo
+cd movie-client
+npm install 
+npm run dev
 </pre>
 
 ## Technologies Used:
@@ -33,30 +33,50 @@ npm start to run the demo
 - MySQL
 - TmdbAPI
 
-### Front End:
-Preview: 
-![]()
-
-The front-end is hosted on GitHub. 
-This repository is the front-end
-
-### Back End
-
-The back-end repository: <a href="https://github.com/ChrisCash2020/movie-connect-server1/" target="_blank" >movieConnect</a>
-
-
 ## Design:
 
-### Front-End:
+### Client-side:
 
-Front End fully developed in ReactJS using Vite
+This is the front-end repository
+
+> Preview
+<p>
+<img src="https://github.com/ChrisCash2020/Images/blob/master/movie/demo.gif" width="220" height="400" />
+</p>
+
+<br/>
+
+> Routes
+<p float="left">
+<img src="https://github.com/ChrisCash2020/Images/blob/master/movie/home.png" width="220" height="400" />
+<img src="https://github.com/ChrisCash2020/Images/blob/master/movie/match.png" width="220" height="400" />
+<img src="https://github.com/ChrisCash2020/Images/blob/master/movie/msg.png" width="220" height="400" />
+<img src="https://github.com/ChrisCash2020/Images/blob/master/movie/prof.png" width="220" height="400" />
+</p>
+
+<br/>
+
+> Error Handling
+<p float="left">
+<img src="https://github.com/ChrisCash2020/Images/blob/master/movie/login.png" width="220" height="400" />
+<img src="https://github.com/ChrisCash2020/Images/blob/master/movie/name.png" width="220" height="400" />
+<img src="https://github.com/ChrisCash2020/Images/blob/master/movie/img.png" width="220" height="400" />
+<img src="https://github.com/ChrisCash2020/Images/blob/master/movie/bday.png" width="220" height="400" />
+<img src="https://github.com/ChrisCash2020/Images/blob/master/movie/bday2.png" width="220" height="400" />
+<img src="https://github.com/ChrisCash2020/Images/blob/master/movie/gen.png" width="220" height="400" />
+<img src="https://github.com/ChrisCash2020/Images/blob/master/movie/pref.png" width="220" height="400" />  
+</p>
+
 
 ### Server-Side:
+The back-end repository: <a href="https://github.com/ChrisCash2020/movie-connect-server1/" target="_blank" >movieConnect</a>
+
 Socket.io Server: 
 - Express server:
   - Module-View-Controller design pattern
   - Manually contructed a User model, controller, and routing
   - In-house SQL queries used to facillitate database requests
+  - Store User profile images in static folder on server
 
 ### Database:
 
