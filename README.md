@@ -16,9 +16,13 @@ the database.
 <br>
 <a href="https://chriscash2020.github.io/movie-client/" target="_blank" >Live Demo</a>
 
-## Time Taken:
+## Installation
 
-2.5 weeks
+<pre>
+cd into the folder
+npm install to install the modules
+npm start to run the demo
+</pre>
 
 ## Technologies Used:
 
@@ -30,7 +34,8 @@ the database.
 - TmdbAPI
 
 ### Front End:
-
+Preview: 
+![]()
 
 The front-end is hosted on GitHub. 
 This repository is the front-end
