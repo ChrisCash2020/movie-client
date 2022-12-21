@@ -15,7 +15,7 @@ movies, accepting matches, chatting with matches, editing profile is collected t
 the database.
 <br>
 <br>
-<a target="_blank" href="https://chriscash2020.github.io/movie-client/">Live Demo</a>
+<a href="https://chriscash2020.github.io/movie-client/" target="_blank" >Live Demo</a>
 
 ## Time Taken:
 
@@ -38,7 +38,7 @@ This repository is the front-end
 
 ### Back End
 
-The back-end repository: <a target"_blank" href="https://github.com/ChrisCash2020/movie-connect-server1/">movieConnect</a>
+The back-end repository: <a href="https://github.com/ChrisCash2020/movie-connect-server1/" target="_blank" >movieConnect</a>
 
 
 ## Design:
