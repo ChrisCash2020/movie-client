@@ -48,23 +48,23 @@ This is the front-end repository
 
 > Routes
 <p float="left">
-<img src="https://github.com/ChrisCash2020/Images/blob/master/movie/home.png" width="220" height="400" />
-<img src="https://github.com/ChrisCash2020/Images/blob/master/movie/match.png" width="220" height="400" />
-<img src="https://github.com/ChrisCash2020/Images/blob/master/movie/msg.png" width="220" height="400" />
-<img src="https://github.com/ChrisCash2020/Images/blob/master/movie/prof.png" width="220" height="400" />
+<img src="https://github.com/ChrisCash2020/Images/blob/master/movie/home.png" width="180" height="360" />
+<img src="https://github.com/ChrisCash2020/Images/blob/master/movie/match.png" width="180" height="360" />
+<img src="https://github.com/ChrisCash2020/Images/blob/master/movie/msg.png" width="180" height="360" />
+<img src="https://github.com/ChrisCash2020/Images/blob/master/movie/prof.png" width="180" height="360" />
 </p>
 
 <br/>
 
 > Error Handling
 <p float="left">
-<img src="https://github.com/ChrisCash2020/Images/blob/master/movie/login.png" width="220" height="400" />
-<img src="https://github.com/ChrisCash2020/Images/blob/master/movie/name.png" width="220" height="400" />
-<img src="https://github.com/ChrisCash2020/Images/blob/master/movie/img.png" width="220" height="400" />
-<img src="https://github.com/ChrisCash2020/Images/blob/master/movie/bday.png" width="220" height="400" />
-<img src="https://github.com/ChrisCash2020/Images/blob/master/movie/bday2.png" width="220" height="400" />
-<img src="https://github.com/ChrisCash2020/Images/blob/master/movie/gen.png" width="220" height="400" />
-<img src="https://github.com/ChrisCash2020/Images/blob/master/movie/pref.png" width="220" height="400" />  
+<img src="https://github.com/ChrisCash2020/Images/blob/master/movie/login.png" width="180" height="360" />
+<img src="https://github.com/ChrisCash2020/Images/blob/master/movie/name.png" width="180" height="360" />
+<img src="https://github.com/ChrisCash2020/Images/blob/master/movie/img.png" width="180" height="360" />
+<img src="https://github.com/ChrisCash2020/Images/blob/master/movie/bday.png" width="180" height="360" />
+<img src="https://github.com/ChrisCash2020/Images/blob/master/movie/bday2.png" width="180" height="360" />
+<img src="https://github.com/ChrisCash2020/Images/blob/master/movie/gen.png" width="180" height="360" />
+<img src="https://github.com/ChrisCash2020/Images/blob/master/movie/pref.png" width="180" height="360" />  
 </p>
 
 
