@@ -62,7 +62,7 @@ function App() {
     }
   }
   async function logOut() {
-    await F.getReq('users/auth/logout')
+    await F.postReq({}, 'users/auth/logout')
     setAuthState({
       status: false,
       user: {},
@@ -141,10 +141,7 @@ function App() {
           {!hide && <>{authState.status ? <>{movieDeck}</> : <></>}</>}
 
           <Routes>
-            <Route
-              path='/'
-              element={<Home authState={authState} />}
-            />
+            <Route path='/' element={<Home authState={authState} />} />
             <Route
               path='/register-form'
               element={
