@@ -11,7 +11,11 @@ export default function CurrentPersonMsg(props) {
   const [currentMessage, setCurrentMessage] = useState('')
   const [messageList, setMessageList] = useState([])
   async function getMessages() {
-    const chats = await F.getReq(`users/chats/${roomId}`)
+    const chats = await F.wildReq(
+      { id: props.sender.id },
+      `users/chats/${roomId}`,
+      'GET'
+    )
     setMessageList(chats)
   }
   const sendMessage = async () => {

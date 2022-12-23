@@ -64,7 +64,7 @@ export default function ProfileEdit(props) {
     for (const key in tempCred) {
       form.append(key, tempCred[key])
     }
-    const res = await F.postReqForm(form, 'users/update')
+    const res = await F.postReqForm(form, 'users/update', 'PUT')
     let data = await res.json()
     setTimeout(() => {
       props.setAuthState({

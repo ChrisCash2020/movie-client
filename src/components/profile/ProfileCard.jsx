@@ -6,7 +6,7 @@ export default function ProfileCard(props) {
   const navigate = useNavigate()
   async function createRoom() {
     if (props.authId) {
-      let data = await F.getReq(`users/room/${props.authId}/${cred.id}`)
+      let data = await F.postReq({}, `users/room/${props.authId}/${cred.id}`)
       if (data.error || data.message) {
       } else {
         navigate(`/message/room`, { state: { roomId: data } })

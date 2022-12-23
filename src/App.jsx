@@ -62,7 +62,7 @@ function App() {
     }
   }
   async function logOut() {
-    await F.postReq({}, 'users/auth/logout')
+    await F.wildReq({}, 'users/auth/logout', 'DELETE')
     setAuthState({
       status: false,
       user: {},

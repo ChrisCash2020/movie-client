@@ -3,9 +3,9 @@
  *********************/
 
 // send a post request that has a file as well
-export const postReqForm = async (data, location) => {
+export const postReqForm = async (data, location, method = 'POST') => {
   return await fetch(`https://crud-movie-chris.herokuapp.com/${location}`, {
-    method: 'POST',
+    method: method,
     mode: 'cors',
     credentials: 'include',
     body: data,
@@ -37,7 +37,21 @@ export const getReq = async (location) => {
   )
   return await res.json()
 }
-
+export const wildReq = async (data, location, method) => {
+  const res = await fetch(
+    `https://crud-movie-chris.herokuapp.com/${location}`,
+    {
+      method: method,
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      mode: 'cors',
+      credentials: 'include',
+      body: JSON.stringify(data),
+    }
+  )
+  return await res.json()
+}
 // special request for getting movies by genre
 export const getMovieSByGenre = async (genre, favs) => {
   let page = 1
