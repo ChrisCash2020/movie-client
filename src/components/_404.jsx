@@ -4,7 +4,9 @@ import { useNavigate } from 'react-router-dom'
 export default function _404(props) {
   const navigate = useNavigate()
   useEffect(() => {
-    navigate('/')
+    setTimeout(() => {
+      navigate('/')
+    }, 2000)
   }, [])
   return (
     <div className='center col' style={{ margin: '40px' }}>
