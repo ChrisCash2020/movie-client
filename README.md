@@ -1,16 +1,16 @@
-# Tinder Clone (movieConnect) - ReactJs, NodeJs, MySQL, WebSockets
+# Tinder Clone (movieConnect) - ReactJs, NodeJs, MySQL, WebSockets, JWT
 
 
 ## Description:
 
-This project was made as a way to practice my WebSockets development.
-It replicats the famous swipe animation that Tinder uses, and it exemplifies
-several small features present in the real website. I made a
-WebSocket API for my backend using Socket.io Server, which allowed a
-two-way communication between client apps and your backend. 
-The user can create a username, password, and profile, which all get
-saved in a JawsDB MySQL database. All user actions from like/dislike 
-movies, accepting matches, chatting with matches, editing profile is collected to 
+This project was made as a way to practice WebSockets in web development.
+This project replicats the famous swipe animation that Tinder uses, and it exemplifies
+several small features present in most dating apps. I made a
+WebSocket API for my backend using a Socket.io server, which allowed
+two-way communication between client apps and the backend. 
+The API lets users register with a username, password, and profile. Then
+saves the credentials in a JawsDB MySQL database. All user actions from like/dislike 
+movies, accepting matches, chatting with matches, and profile editting is saved to 
 the database.
 <br>
 <br>
@@ -32,6 +32,16 @@ npm run dev
 - Socket.io
 - MySQL
 - TmdbAPI
+- JSON Web Token
+
+## Top Features:
+- Bcrypt password encryption/verification
+- Multer file upload of profile images
+- JWT authentication and authorization
+- Filtered matching system based on preferences and movie interests
+- Genre based movie recommendation filtering as well as favorited movie filtering
+- Movie recommendation refreshing 
+- Bcrypt password encryption/verification
 
 ## Design:
 
@@ -73,10 +83,10 @@ The back-end repository: <a href="https://github.com/ChrisCash2020/movie-connect
 
 Socket.io Server: 
 - Express server:
-  - Module-View-Controller design pattern
-  - Manually contructed a User model, controller, and routing
-  - In-house SQL queries used to facillitate database requests
+  - Module-View-Controller project structure
+  - Manually contructed User model NO-ORM
   - Store User profile images in static folder on server
+  - User Authenication done through secure HTTP only JWT
 
 ### Database:
 
