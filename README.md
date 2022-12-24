@@ -46,6 +46,8 @@ npm run dev
 - Genre based movie recommendation filtering as well as favorited movie filtering
 - Movie recommendation refreshing 
 - Bcrypt password encryption/verification
+- Front end UI error handling
+- Mobile first web design
 
 ## Design:
 
