@@ -3,18 +3,22 @@
 
 ## Description:
 
-This project was made as a way to practice WebSockets in web development.
+This project was made as a way to practice using Web Sockets.
 This project replicats the famous swipe animation that Tinder uses, and it exemplifies
 several small features present in most dating apps. I made a
 WebSocket API for my backend using a Socket.io server, which allowed
 two-way communication between client apps and the backend. 
-The API lets users register with a username, password, and profile. Then
-saves the credentials in a JawsDB MySQL database. All user actions from like/dislike 
-movies, accepting matches, chatting with matches, and profile editting is saved to 
+First the API lets users register with a username, password, and profile. Then
+saves the credentials in a JawsDB MySQL database. The API handles user actions such as
+like/disliking movies, accepting matches, chatting with matches, and profile editting is saved to 
 the database.
 <br>
 <br>
 <a href="https://movieconnect.netlify.app/" target="_blank" >Live Demo</a>
+> Preview
+<p>
+<img src="https://github.com/ChrisCash2020/Images/blob/master/movie/demo.gif" />
+</p>
 
 ## Installation
 
@@ -48,11 +52,6 @@ npm run dev
 ### Client-side:
 
 This is the front-end repository
-
-> Preview
-<p>
-<img src="https://github.com/ChrisCash2020/Images/blob/master/movie/demo.gif" />
-</p>
 
 <br/>
 
