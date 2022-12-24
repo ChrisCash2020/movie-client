@@ -14,7 +14,7 @@ movies, accepting matches, chatting with matches, and profile editting is saved 
 the database.
 <br>
 <br>
-<a href="https://chriscash2020.github.io/movie-client/" target="_blank" >Live Demo</a>
+<a href="https://movieconnect.netlify.app/" target="_blank" >Live Demo</a>
 
 ## Installation
 
