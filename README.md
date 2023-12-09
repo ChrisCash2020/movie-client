@@ -8,11 +8,9 @@
 updates.
 - Integrated JSON Web Tokens (JWT) into the existing system, providing secure and efficient user authentication and authorization.
 - Leveraged TmdbAPI and MySQL database to create a filtering system.
-
-<br>
 <br>
 <a href="https://movieconnect.netlify.app/" target="_blank" >Live Demo</a>
-> Preview
+<br>
 <p>
 <img src="https://github.com/ChrisCash2020/Images/blob/master/movie/demo.gif" />
 </p>
