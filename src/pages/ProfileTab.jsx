@@ -1,20 +1,20 @@
-import { useEffect, useState } from 'react'
-import { Link } from 'react-router-dom'
-import ProfileCard from '../components/profile/ProfileCard'
+import { useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
+import ProfileCard from '../components/profile/ProfileCard';
 
 export default function ProfileTab(props) {
-  const cred = props.authState.user
+  const cred = props.authState.user;
   const [url, setUrl] = useState(
-    `https://crud-movie-chris.herokuapp.com/public/uploads/`
-  )
+    `https://crud-movie-chris-175144c6fd89.herokuapp.com/public/uploads/`
+  );
   useEffect(() => {
     if (cred.img != undefined) {
       setUrl(
         () =>
-          `https://crud-movie-chris.herokuapp.com/public/uploads/${cred.img}`
-      )
+          `https://crud-movie-chris-175144c6fd89.herokuapp.com/public/uploads/${cred.img}`
+      );
     }
-  }, [cred])
+  }, [cred]);
   return (
     <>
       <div className='edit-container center'>
@@ -31,5 +31,5 @@ export default function ProfileTab(props) {
         </div>
       </div>
     </>
-  )
+  );
 }

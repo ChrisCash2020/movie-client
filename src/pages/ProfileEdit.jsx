@@ -1,11 +1,11 @@
-import { useEffect, useState } from 'react'
-import * as F from '../helpers/helper-functions'
-import EditGen from '../components/profile/EditGen'
-import EditPref from '../components/profile/EditPref'
-import EditStat from '../components/profile/EditStat'
+import { useEffect, useState } from 'react';
+import * as F from '../helpers/helper-functions';
+import EditGen from '../components/profile/EditGen';
+import EditPref from '../components/profile/EditPref';
+import EditStat from '../components/profile/EditStat';
 
 export default function ProfileEdit(props) {
-  const cred = props.authState.user
+  const cred = props.authState.user;
   const [tempCred, setTempCred] = useState({
     id: '',
     bio: '',
@@ -13,73 +13,73 @@ export default function ProfileEdit(props) {
     stat: '',
     pref: '',
     img: '',
-  })
+  });
 
   // State variables for the name_img element
   const [url, setUrl] = useState(
-    `https://crud-movie-chris.herokuapp.com/public/uploads/`
-  )
+    `https://crud-movie-chris-175144c6fd89.herokuapp.com/public/uploads/`
+  );
   useEffect(() => {
     if (cred.img != undefined) {
       setUrl(
         () =>
-          `https://crud-movie-chris.herokuapp.com/public/uploads/${cred.img}`
-      )
+          `https://crud-movie-chris-175144c6fd89.herokuapp.com/public/uploads/${cred.img}`
+      );
       for (const key in tempCred) {
-        setTempCred((obj) => ({ ...obj, [key]: cred[key] }))
+        setTempCred((obj) => ({ ...obj, [key]: cred[key] }));
       }
     }
-  }, [cred])
+  }, [cred]);
 
-  useEffect(() => {}, [tempCred])
+  useEffect(() => {}, [tempCred]);
   // State variables for the bday
-  const [msg, setMsg] = useState({ loading: false, failed: false })
+  const [msg, setMsg] = useState({ loading: false, failed: false });
   const [edit, setEdit] = useState({
     bio: false,
     gen: false,
     stat: false,
     pref: false,
     img: false,
-  })
+  });
 
   function handleCred(e) {
-    const { name, value, files, type } = e.target
-    const val = files === null ? value : files[0]
+    const { name, value, files, type } = e.target;
+    const val = files === null ? value : files[0];
     if (type == 'file') {
-      setUrl(URL.createObjectURL(files[0]))
+      setUrl(URL.createObjectURL(files[0]));
     }
-    setTempCred((old) => ({ ...old, [name]: val }))
+    setTempCred((old) => ({ ...old, [name]: val }));
   }
 
   async function authCred() {
     for (const key in tempCred) {
       if (tempCred[key] === '' && key != 'bio') {
-        setMsg((old) => ({ ...old, failed: true }))
-        return
+        setMsg((old) => ({ ...old, failed: true }));
+        return;
       }
     }
-    setMsg((old) => ({ ...old, loading: true }))
+    setMsg((old) => ({ ...old, loading: true }));
 
-    const form = new FormData()
+    const form = new FormData();
     for (const key in tempCred) {
-      form.append(key, tempCred[key])
+      form.append(key, tempCred[key]);
     }
-    const res = await F.postReqForm(form, 'users/update', 'PUT')
-    let data = await res.json()
+    const res = await F.postReqForm(form, 'users/update', 'PUT');
+    let data = await res.json();
     setTimeout(() => {
       props.setAuthState({
         status: true,
         user: data,
-      })
-      setMsg((old) => ({ loading: false, failed: false }))
+      });
+      setMsg((old) => ({ loading: false, failed: false }));
       setEdit({
         bio: false,
         gen: false,
         stat: false,
         pref: false,
         img: false,
-      })
-    }, 800)
+      });
+    }, 800);
     // send to the backend get authenticated
   }
 
@@ -207,5 +207,5 @@ export default function ProfileEdit(props) {
         </div>
       </div>
     </>
-  )
+  );
 }

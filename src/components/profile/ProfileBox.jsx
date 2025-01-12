@@ -1,18 +1,19 @@
-import * as F from '../../helpers/helper-functions'
-import ProfileCard from './ProfileCard'
-import { useState } from 'react'
-import closeBtn from '../../assets/no.png'
+import * as F from '../../helpers/helper-functions';
+import ProfileCard from './ProfileCard';
+import { useState } from 'react';
+import closeBtn from '../../assets/no.png';
 export default function ProfileBox(props) {
-  const match = props.match
-  const [close, setClose] = useState(false)
+  const match = props.match;
+  const [close, setClose] = useState(false);
   const [url, setUrl] = useState(
-    `https://crud-movie-chris.herokuapp.com/public/uploads/` + match.img
-  )
+    `https://crud-movie-chris-175144c6fd89.herokuapp.com/public/uploads/` +
+      match.img
+  );
   function openBox() {
     if (close) {
-      setClose(false)
+      setClose(false);
     } else {
-      setClose(true)
+      setClose(true);
     }
   }
   return (
@@ -79,5 +80,5 @@ export default function ProfileBox(props) {
         </div>
       </div>
     </>
-  )
+  );
 }

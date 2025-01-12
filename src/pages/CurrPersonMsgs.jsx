@@ -1,22 +1,24 @@
-import { useEffect, useState } from 'react'
-import { useLocation } from 'react-router-dom'
-import io from 'socket.io-client'
-import * as F from '../helpers/helper-functions'
-import { nanoid } from 'nanoid'
-const socket = io.connect('https://crud-movie-chris.herokuapp.com')
+import { useEffect, useState } from 'react';
+import { useLocation } from 'react-router-dom';
+import io from 'socket.io-client';
+import * as F from '../helpers/helper-functions';
+import { nanoid } from 'nanoid';
+const socket = io.connect(
+  'https://crud-movie-chris-175144c6fd89.herokuapp.com'
+);
 
 export default function CurrentPersonMsg(props) {
-  const location = useLocation()
-  const { roomId } = location.state
-  const [currentMessage, setCurrentMessage] = useState('')
-  const [messageList, setMessageList] = useState([])
+  const location = useLocation();
+  const { roomId } = location.state;
+  const [currentMessage, setCurrentMessage] = useState('');
+  const [messageList, setMessageList] = useState([]);
   async function getMessages() {
     const chats = await F.wildReq(
       { id: props.sender.id },
       `users/chats/${roomId}`,
       'GET'
-    )
-    setMessageList(chats)
+    );
+    setMessageList(chats);
   }
   const sendMessage = async () => {
     if (currentMessage !== '') {
@@ -32,11 +34,11 @@ export default function CurrentPersonMsg(props) {
           hour: '2-digit',
           minute: '2-digit',
         }),
-      }
+      };
 
-      await socket.emit('send_message', messageData)
-      setMessageList((list) => [...list, messageData])
-      setCurrentMessage('')
+      await socket.emit('send_message', messageData);
+      setMessageList((list) => [...list, messageData]);
+      setCurrentMessage('');
       await F.postReq(
         {
           text: currentMessage,
@@ -45,23 +47,23 @@ export default function CurrentPersonMsg(props) {
           time: messageData.time,
         },
         `users/chats/${roomId}`
-      )
+      );
     }
-  }
+  };
   useEffect(() => {
     if (props.sender.id) {
-      getMessages()
-      socket.emit('join_room', roomId)
+      getMessages();
+      socket.emit('join_room', roomId);
     }
-  }, [])
+  }, []);
   useEffect(() => {
     if (props.sender.id) {
-      console.log('in the receive')
+      console.log('in the receive');
       socket.on('receive_message', (data) => {
-        setMessageList((list) => [...list, data])
-      })
+        setMessageList((list) => [...list, data]);
+      });
     }
-  }, [socket])
+  }, [socket]);
   return (
     <>
       <div
@@ -100,7 +102,7 @@ export default function CurrentPersonMsg(props) {
                   {messageContent.time}
                 </label>
               </div>
-            )
+            );
           })}
         </div>
         <br />
@@ -109,10 +111,10 @@ export default function CurrentPersonMsg(props) {
             type='text'
             value={currentMessage}
             onChange={(event) => {
-              setCurrentMessage(event.target.value)
+              setCurrentMessage(event.target.value);
             }}
             onKeyPress={(event) => {
-              event.key === 'Enter' && sendMessage()
+              event.key === 'Enter' && sendMessage();
             }}
             placeholder='Type a message'
             style={{
@@ -136,5 +138,5 @@ export default function CurrentPersonMsg(props) {
         <br />
       </div>
     </>
-  )
+  );
 }

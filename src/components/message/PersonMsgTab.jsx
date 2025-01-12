@@ -1,30 +1,30 @@
-import { useEffect, useState } from 'react'
-import { Link } from 'react-router-dom'
-import ProfileCard from '../profile/ProfileCard'
-import closeBtn from '../../assets/no.png'
+import { useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
+import ProfileCard from '../profile/ProfileCard';
+import closeBtn from '../../assets/no.png';
 export default function PersonMsgTab(props) {
-  const [close, setClose] = useState(false)
-  const [info, setInfo] = useState({})
-  const [recentMsg, setRecentMsg] = useState(undefined)
+  const [close, setClose] = useState(false);
+  const [info, setInfo] = useState({});
+  const [recentMsg, setRecentMsg] = useState(undefined);
   const [url, setUrl] = useState(
-    `https://crud-movie-chris.herokuapp.com/public/uploads/`
-  )
+    `https://crud-movie-chris-175144c6fd89.herokuapp.com/public/uploads/`
+  );
   useEffect(() => {
     if (props.person != undefined) {
       setUrl(
         () =>
-          `https://crud-movie-chris.herokuapp.com/public/uploads/${props.person.info.img}`
-      )
-      setInfo(props.person.info)
+          `https://crud-movie-chris-175144c6fd89.herokuapp.com/public/uploads/${props.person.info.img}`
+      );
+      setInfo(props.person.info);
       if (props.person.chats.length) {
-        let str = props.person.chats[props.person.chats.length - 1].text
+        let str = props.person.chats[props.person.chats.length - 1].text;
         if (str.length >= 45) {
-          str = `${str.slice(0, 42)}...`
+          str = `${str.slice(0, 42)}...`;
         }
-        setRecentMsg(str)
+        setRecentMsg(str);
       }
     }
-  }, [])
+  }, []);
 
   return (
     <>
@@ -116,5 +116,5 @@ export default function PersonMsgTab(props) {
         </div>
       )}
     </>
-  )
+  );
 }
